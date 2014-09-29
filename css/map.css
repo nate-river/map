@@ -1,0 +1,68 @@
+body,ul,li{
+  margin:0;padding:0;
+  list-style:none;
+}
+.img{
+  width:100%;
+}
+.blur{
+    -webkit-filter: blur(5px);
+}
+.tanchu{
+  display:none;
+  width:700px;
+  position:fixed;
+  top:0px;
+  border:1px solid rgba(86, 87, 87, 0.74);
+  z-index:99;
+  background-color:#fbfbfb;
+  opacity:0.7;
+  overflow:auto;
+}
+.list{
+  padding:20px;
+}
+.list-item{
+  height:100px;
+}
+.people{
+  float:left;
+  width:70px;
+  /*border-radius:50px;*/
+}
+.name{
+  padding-top:20px;
+  font-size:17pt;
+  margin-left:20px;
+  color:#460b72;
+}
+.country{
+  font-size:10pt;
+  margin-left:20px;
+}
+.daibiaozuo{
+  font-size:15pt;
+  margin-left:20px;
+  margin-right:40px;
+  color:#17080d;
+}
+
+.left{
+  float:left;
+  width:70px;
+  height:70px;
+  margin-left:20px;
+  overflow:hidden;
+  border-radius:50%;
+}
+.right{
+  height:60px;
+  width:270px;
+  padding-top:10px;
+  float:left;
+}
+.r-right{
+  height:57px;
+  padding-top:13px;
+  float:left;
+}

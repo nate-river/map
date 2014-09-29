@@ -1,0 +1,83 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="./css/map.css">
+</head>
+<body>
+<img src="./pic/map.jpg" usemap="#imgMap"  class="img" id="img" border="0">
+<map name="imgMap">
+  <area id="beimei" shape="rect" coords="226,270,400,430" href="javascript:void(0)">
+  <area id="nanmei" shape="rect" coords="313,440,500,620" href="javascript:void(0)">
+  <area id="feizhou"shape="rect" coords="570,360,740,550" href="javascript:void(0)">
+  <area id="ouzhou" shape="rect" coords="600,273,780,360" href="javascript:void(0)">
+  <area id="yazhou" shape="rect" coords="800,257,1023,500" href="javascript:void(0)">
+  <area id="dayang" shape="rect" coords="900,510,1023,600" href="javascript:void(0)">
+</map>
+  <div class="tanchu">
+    <ul class="list">
+      <li class="list-item">
+        <div class="left">
+          <div class="people"></div>
+        <!--img class="people" src="http://pic.baike.soso.com/p/20130703/20130703091909-820800826.jpg"-->
+        </div>
+        <div class="right">
+        <span class="name">雪莱</span></br>
+        </div>
+        <div class="r-right">
+          <span class="daibiaozuo">西风颂</span>
+        </div>
+      </li>
+    </ul>
+</div>
+
+  <script src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+  <script src="./script/database.js"></script>
+
+  <script>
+    var colors = ['#bbcbb8','#b5d3ed','#f7d5ca','rgba(173, 145, 196, 0.88)','#eef0ec','#baf3c1'];
+    var colorsForState = {};
+    $('area').each(function(i){
+      colorsForState[this.id] = colors[i];
+    });
+
+    $('area').click(function(){
+      $('.tanchu').css('height',$(window).height() );
+      $('.tanchu').css('left', ($(window).width() -700)/2 )
+      $('.tanchu').css('background-color',colorsForState[this.id]);
+      $('.tanchu').slideToggle(500);
+      $('#img').toggleClass('blur',2000);
+      $('.list').empty();
+      var content = '';
+      for (var n in database){
+        if (n == this.id) {
+          for(var t in database[n]){
+              content = content + '<li class="list-item">\
+                          <div class="left">\
+                          <img class="people" src="./pic/'+t+'.jpg"  onerror="javascript:this.src=\'./pic/1.jpg\';">\
+                          </div>\
+                          <div class="right">\
+                          <span class="name">'+ t +'</span></br>\
+                          </div>\
+                          <div class="r-right">\
+                          <span class="daibiaozuo">'+ database[n][t]+'</span>\
+                          </div>\
+                          </li>';
+          }
+        }
+      }
+      $('.list').html(content);
+      $('.tanchu').scrollTop(0);
+    })
+
+    $('#img').click(function(){
+      $('.tanchu').slideUp(500);
+      $('#img').removeClass('blur',2000);
+    })
+
+    $(window).resize(function(){
+      $('.tanchu').css('height',$(window).height());
+      $('.tanchu').css('left', ($(window).width() -700)/2 )
+    })
+  </script>
+</body>
+</html>
