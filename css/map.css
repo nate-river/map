@@ -1,22 +1,33 @@
 body,ul,li{
   margin:0;padding:0;
   list-style:none;
+  font-size:1.1em;
 }
-.img{
-  width:100%;
+.content{
+  overflow:hidden;
+  width:730px;
+  height:630px;
+  margin:0 auto;
 }
-.blur{
-    -webkit-filter: blur(5px);
+img{
+width:100%;
+}
+area{
+outline:none;
 }
 .tanchu{
   display:none;
-  width:700px;
-  position:fixed;
+  width:500px;
+  height:630px;
+  position:absolute;
   top:0px;
+  left:50%;
+  margin-left:-250px;
+
   border:1px solid rgba(86, 87, 87, 0.74);
   z-index:99;
   background-color:#fbfbfb;
-  opacity:0.7;
+  opacity:0.9;
   overflow:auto;
 }
 .list{
@@ -24,27 +35,6 @@ body,ul,li{
 }
 .list-item{
   height:100px;
-}
-.people{
-  float:left;
-  width:70px;
-  /*border-radius:50px;*/
-}
-.name{
-  padding-top:20px;
-  font-size:17pt;
-  margin-left:20px;
-  color:#460b72;
-}
-.country{
-  font-size:10pt;
-  margin-left:20px;
-}
-.daibiaozuo{
-  font-size:15pt;
-  margin-left:20px;
-  margin-right:40px;
-  color:#17080d;
 }
 
 .left{
@@ -56,13 +46,22 @@ body,ul,li{
   border-radius:50%;
 }
 .right{
-  height:60px;
-  width:270px;
-  padding-top:10px;
+  font-size:0.8em;
+  width:210px;
+  max-width:210px;
+  padding-left:40px;
+  height:70px;
+  line-height:70px;
+  max-width:210px;
+  overflow:hidden;
   float:left;
 }
 .r-right{
-  height:57px;
-  padding-top:13px;
+font-size:0.6em;
+  width:107px;
+  max-width:107px;
+  height:70px;
+  line-height:70px;
   float:left;
+  overflow:hidden;
 }
