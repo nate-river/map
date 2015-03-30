@@ -1,14 +1,140 @@
-body,ul,li{
+body{
   margin:0;padding:0;
   list-style:none;
-  font-size:1.1em;
+  Background:#656565;
+  font-family:"Broadway"
 }
+
 .content{
-  overflow:hidden;
-  width:730px;
-  height:630px;
-  margin:0 auto;
+  width:100%;
+  background:url('../pic/con-bg.png');
+  position:relative;
+  padding:40px 0px;
 }
+.map{
+  width:800px;
+  height:600px;
+  margin:0 auto;
+  background: url('../pic/main-map.jpg');
+  opacity:0.4;
+  border-radius:10px;
+}
+
+.circle-wrapper{
+  position:absolute;
+  width:100%;
+  top:150px;
+  /* Background:#ccc; */
+}
+.circle-wrapper .inner{
+  width:800px;
+  margin:0 auto;
+  overflow:hidden;
+}
+
+.circle{
+  border-radius:50%;
+}
+.circle-out{
+  width:145px;
+  height:145px;
+  background:white;
+  position:relative;
+  float:left;
+  margin:27px;
+  box-shadow:3px 5px 20px black ;
+}
+.circle-inner{
+  position:absolute;
+  width:124px;
+  height:124px;
+  top:50%;
+  left:50%;
+  margin-top:-62px;
+  margin-left:-62px;
+  overflow:hidden;
+  /* box-shadow:2px 2px 7px black; */
+}
+.circle a{
+  position:absolute;
+  display:block;
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  z-index:2000;
+  top:0px;
+  opacity:0.8;
+  -webkit-transition:.9s ease;
+}
+.circle a:hover{
+  box-shadow:0px 0px 15px black inset;
+  opacity:0;
+}
+
+.circle em{
+  position:absolute;
+  display:block;
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  z-index:1000;
+  top:0px;
+  -webkit-transition:.6s ease;
+  box-shadow:0px 0px 32px black inset;
+}
+.circle span{
+  display:block;
+  position:absolute;
+  z-index:3000;
+  top:80px;
+  left:30px;
+  color:white;
+  -webkit-transition:.5s ease;
+}
+
+.gray{
+  background: #393939;
+}
+.purple{
+  background: #815495;
+}
+.orange{
+  background: #d35429;
+}
+.coffee{
+  background: #8c5446;
+}
+.yellow{
+  background: #de9736;
+}
+.green{
+  background: #698a39;
+}
+.blue{
+  background: #5e91ca;
+}
+.red{
+  background: #5e0707;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 img{
 width:100%;
 }
@@ -16,19 +142,22 @@ area{
 outline:none;
 }
 .tanchu{
-  display:none;
-  width:500px;
-  height:630px;
-  position:absolute;
-  top:0px;
-  left:50%;
-  margin-left:-250px;
+  /* display:none; */
+  /* overflow:hidden; */
+  /* width:500px; */
+  /* height:630px; */
+  /* position:absolute; */
+  /* top:0px; */
+  /* margin-top:-314px; */
+  /* left:50%; */
+  /* margin-left:-250px; */
 
-  border:1px solid rgba(86, 87, 87, 0.74);
   z-index:99;
+  box-shadow:0px 0px 35px #ccc inset;
   background-color:#fbfbfb;
   opacity:0.9;
   overflow:auto;
+  -webkit-transition:.5s ease;
 }
 .list{
   padding:20px;
