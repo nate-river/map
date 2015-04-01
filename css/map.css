@@ -8,7 +8,7 @@ body{
   width:100%;
   background:url('../pic/con-bg.png');
   position:relative;
-  padding:40px 0px;
+  padding-top:40px;
 }
 .map{
   width:800px;
@@ -45,11 +45,12 @@ body{
 
 .circle-wrapper .inner{
   width:800px;
-  height:470px;
+  height:350px;
   margin:0 auto;
   overflow:auto;
   padding-top:130px;
   position:relative;
+  padding-bottom:120px;
 }
 .inner .circle{
   border-radius:50%;

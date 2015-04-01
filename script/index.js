@@ -2,9 +2,14 @@ $(function(){
     //鼠标放到人头上名字消失
     $('.circle-wrapper').delegate('a','mouseover',function(){
         $(this).parent().find('span').css('top','140px');
+        $(this).parent().parent().css('webkitTransform','scale(1.2,1.2)');
+        $('.circle-out').find('a').css('opacity','0.9');
+        $(this).parent().find('a').css('opacity','0.1');
     });
     $('.circle-wrapper').delegate('a','mouseout',function(){
         $(this).parent().find('span').css('top','80px');
+        $(this).parent().parent().css('webkitTransform','scale(1,1)');
+        $('.circle-out').find('a').css('opacity','0.4');
     });
     $('.circle-wrapper').delegate('span','mouseover',function(){
         $(this).css('top','140px');
@@ -50,7 +55,7 @@ $(function(){
 
         for ( var name in peopleInfo ){
             var
-            el = $('<div/>').html('<img onerror="javascript:this.src=\'./pic/1.jpg\'" src="./pic/'+name+'.jpg"/><em></em><a href="http://zh.wikipedia.org/wiki/'+name+'" target="_blank"></a><span>'+name+'</span>').addClass('circle circle-inner'),
+            el = $('<div/>').html('<img onerror="javascript:this.src=\'./pic/1.jpg\'" src="./pic/'+name+'.jpg"/><em></em><a href="http://www.bing.com/knows/search?q='+name+'&mkt=zh-cn" target="_blank"></a><span>'+name+'</span>').addClass('circle circle-inner'),
             pos = $(that).position(),
             $circle = $('<div/>').html(el).appendTo($('.inner')).addClass('circle circle-out'),
             _left = e.offsetX + pos.left - pianyi + 'px' ,
