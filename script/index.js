@@ -1,4 +1,8 @@
 $(function(){
+    $('.content').outerHeight( $(window).outerHeight() );
+    $(window).resize(function(){
+        $('.content').outerHeight(  $(window).outerHeight() );
+    });
     //鼠标放到人头上名字消失
     $('.circle-wrapper').delegate('a','mouseover',function(){
         $(this).parent().find('span').css('top','140px');
