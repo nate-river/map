@@ -11,7 +11,7 @@ $(function(){
         $(this).parent().find('a').css('opacity','0.1');
     });
     $('.circle-wrapper').delegate('a','mouseout',function(){
-        $(this).parent().find('span').css('top','80px');
+        $(this).parent().find('span').css('top','95px');
         $(this).parent().parent().css('webkitTransform','scale(1,1)');
         $('.circle-out').find('a').css('opacity','0.4');
     });

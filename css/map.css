@@ -2,7 +2,8 @@ body{
   margin:0;padding:0;
   list-style:none;
   Background:#656565;
-  font-family:"Broadway"
+  font-family:"Broadway";
+  font-size:16px;
 }
 .content{
   width:100%;
@@ -40,6 +41,7 @@ body{
   width:100%;
   height:600px;
   top:40px;
+  overflow:auto;
   /* Background:#ccc; */
 }
 
@@ -47,7 +49,6 @@ body{
   width:800px;
   height:350px;
   margin:0 auto;
-  overflow:auto;
   padding-top:130px;
   position:relative;
   padding-bottom:120px;
@@ -55,6 +56,12 @@ body{
 .inner .circle{
   border-radius:50%;
 }
+/* .circle-bao{ */
+/*   width:145px; */
+/*   height:145px; */
+/*   padding:25px; */
+/* } */
+
 .circle-out{
   position:relative;
   width:145px;
@@ -109,7 +116,7 @@ body{
   display:block;
   position:absolute;
   z-index:3000;
-  top:80px;
+  top:95px;
   left:50%;
   margin-left:-32px;
   color:white;
